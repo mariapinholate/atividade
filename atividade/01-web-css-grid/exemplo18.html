@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Layout com CSS Grid</title>
     <style>
         * {
@@ -13,7 +14,7 @@
             padding: 0;
         }
 
-        .container {
+        .container-layout {
             display: grid;
             grid-template-areas:
                 "header header header"
@@ -54,16 +55,60 @@
             text-align: center;
             padding: 1rem;
         }
+
+        .cards{
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+        justify-items: center; 
+
+        
+        }
+        .cards img{
+            height:200px;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-layout">
         <div class="header">Logo | Título | Menu</div>
         <div class="sidebar">Menu Lateral</div>
-        <div class="main">Área Principal</div>
+        <div class="main"> 
+            <h1> Os melhores cupcakes </h1>
+            <div class="cards"> 
+            <div class="card"style="width: 18rem;">
+  <img src="chocolate.png" class="card-img-top" alt="imagem cupcake de chocolate">
+  <div class="card-body">
+    <h5 class="card-title">Cupcake de chocolate</h5>
+    <p class="card-text">Cupcake de : simples, clássico e absolutamente irresistível.</p>
+    <a href="#" class="btn btn-primary">Comprar</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="morango.png" class="card-img-top" alt="imagem cupcake de morango ">
+  <div class="card-body">
+    <h5 class="card-title">Cupcake de morango</h5>
+    <p class="card-text">Cupcake de morango: simples, clássico e absolutamente irresistível.</p>
+    <a href="#" class="btn btn-primary">Comprar</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="creme.png" class="card-img-top" alt="imagem cupcake de creme">
+  <div class="card-body">
+    <h5 class="card-title">Cupcake de creme </h5>
+    <p class="card-text">Cupcake de creme: simples, clássico e absolutamente irresistível.</p>
+    <a href="#" class="btn btn-primary">Comprar</a>
+  </div>
+  </div>
+</div>
+        </div>
+        
+        
         <div class="footer">Rodapé</div>
     </div>
+    
 </body>
 
 </html>
